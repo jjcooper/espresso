@@ -9,5 +9,5 @@ on switch3#state=3 do backlog power2 0; power3 1 ENDON
 
 
 rule2
-on HX711#Weight>%var5% do backlog var1 %value%; var5 100; add1 .1 ENDON
+on HX711#Weight>%var5% do backlog var1 %value%; var5 100; add1 %mem1% ENDON
 on HX711#Weight>%var1% do backlog Power4 0; var5 .01; Publish stat/coffee/coffeedone ON ENDON
